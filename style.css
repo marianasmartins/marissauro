@@ -1,0 +1,47 @@
+body {
+    background: #0e0d0dc2;
+}
+
+.mario {
+    width: 96px;
+    height: 96px;
+    background-image: url("img/mario.png");
+    position: absolute; /*o elemento ficará na posição que defini, independente do que estiver em volta*/
+    bottom: 0; /*o elemento ficará em baixo.*/
+}
+
+.cogumelo {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    bottom: 0;
+    background-image: url("img/cogumelo.png");
+}
+
+.game-over{
+    text-align: center;
+    color: #ffffff;
+    margin-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    }
+
+/*definir etapas de uma animação*/
+@keyframes slideright { /*movimentação para a direita*/
+    from{
+        background-position: 70000%; /*bem para a esquerda*/
+    }
+    to{
+        background-position: 0; /*bem para a direita*/
+    }
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url("img/background-mario.jpg");
+    background-repeat: repeat-x; /*vai repetir de maneira infinita, independente do tamanho da tela*/
+    animation: slideright 600s infinite linear; /*nunca vai parar de correr o fundo*/
+    width: 100%;
+    height: 100%;
+}
